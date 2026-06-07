@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siklus 2 - Portofolio | Zainudin</title>
+    
+    <!-- Tailwind CSS untuk Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome untuk Ikon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#4F46E5', // Indigo 600
+                        secondary: '#06B6D4', // Cyan 500
+                        dark: '#0F172A', // Slate 900
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Memanggil file CSS eksternal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans text-gray-700 bg-gray-50 antialiased selection:bg-primary selection:text-white">
+
+    <!-- Navigasi Khusus Halaman Artefak -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="font-display font-bold text-2xl text-dark tracking-tight">
+                        Zain | <span class="text-primary">E - Portofolio</span>
+                    </a>
+                </div>
+                <!-- Menu Desktop -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-600 hover:text-primary transition font-medium">Beranda</a>
+                    <a href="siklus1.html" class="text-gray-600 hover:text-primary transition font-medium">Siklus 1</a>
+                    <a href="siklus2.html" class="text-primary font-bold border-b-2 border-primary transition pb-1">Siklus 2</a>
+                    <a href="siklus3.html" class="text-gray-600 hover:text-primary transition font-medium">Siklus 3</a>
+                </div>
+                <!-- Tombol Menu Mobile -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col">
+                <a href="index.html" class="block px-3 py-2 text-gray-600 font-medium hover:bg-indigo-50 hover:text-primary rounded-md">Beranda</a>
+                <a href="siklus1.html" class="block px-3 py-2 text-gray-600 font-medium hover:bg-indigo-50 hover:text-primary rounded-md">Siklus 1</a>
+                <a href="siklus2.html" class="block px-3 py-2 text-primary font-bold bg-indigo-50 rounded-md">Siklus 2</a>
+                <a href="siklus3.html" class="block px-3 py-2 text-gray-600 font-medium hover:bg-indigo-50 hover:text-primary rounded-md">Siklus 3</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Halaman / Mini Hero -->
+    <section class="pt-32 pb-16 bg-white border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 fade-in-up">
+                <div>
+                    <div class="inline-block px-4 py-1.5 bg-cyan-50 text-secondary font-semibold rounded-full text-sm mb-4">
+                        <i class="fas fa-shield-alt mr-2"></i> PPL Terbimbing - Siklus 2
+                    </div>
+                    <h1 class="font-display text-3xl md:text-5xl font-bold text-dark mb-4">
+                        DSI: <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">Identifikasi & Bahaya Hoaks</span>
+                    </h1>
+                    <p class="text-gray-500 max-w-2xl text-lg">
+                        Analisis komprehensif terhadap perangkat pembelajaran yang berfokus pada melatih nalar kritis peserta didik dalam membedakan misinformasi dan menyajikan kampanye anti-hoaks.
+                    </p>
+                </div>
+                <div class="flex-shrink-0">
+                    <a href="#artefak" class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-secondary text-white hover:bg-cyan-600 transition shadow-lg shadow-cyan-200">
+                        <i class="fas fa-arrow-down"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Artefak & Analisis -->
+    <section id="artefak" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+
+            <!-- ARTEFAK 1: MODUL AJAR -->
+            <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden fade-in-up">
+                <div class="p-8 md:p-10 border-b border-gray-50 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
+                    <div class="flex items-center gap-5">
+                        <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">
+                            <i class="fas fa-file-invoice"></i>
+                        </div>
+                        <div>
+                            <h2 class="font-display text-2xl font-bold text-dark">Modul Ajar (RPP)</h2>
+                            <p class="text-gray-500">Materi Mengkaji Kritis Informasi: HOAKS (Fase D)</p>
+                        </div>
+                    </div>
+                    <button onclick="window.open('assets/siklus2/media_ajar_fix.pdf', '_blank')" class="bg-white border-2 border-gray-200 text-gray-700 hover:border-secondary hover:text-secondary px-6 py-2.5 rounded-full font-medium transition flex items-center whitespace-nowrap">
+                        <i class="far fa-file-pdf text-red-500 mr-2"></i> Lihat Dokumen
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+                    <div class="p-8 md:p-10 bg-white">
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="font-bold text-dark flex items-center mb-2"><i class="fas fa-bullseye text-blue-500 mr-2"></i> Konteks & Tujuan</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">
+                                    Modul ajar ini dirancang untuk kelas VII dengan alokasi 2 JP. Bertujuan memandu peserta didik mengidentifikasi hoaks, mempraktikkan cara cek fakta melalui sumber resmi (BMKG, Kominfo, CekFakta), dan memproduksi karya kreatif (poster) sebagai kampanye literasi digital.
+                                </p>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="bg-emerald-50/50 p-4 rounded-xl border border-emerald-100">
+                                    <h4 class="font-semibold text-emerald-800 text-sm mb-1">Kelebihan</h4>
+                                    <ul class="text-xs text-gray-600 space-y-1 list-disc pl-4">
+                                        <li>Integrasi kuat antara model <em>Problem-Based Learning</em> dengan <em>Mini-Project</em>.</li>
+                                        <li>Memiliki Pertanyaan Pemantik yang sangat relevan dengan keseharian siswa (pesan berantai WA).</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-red-50/50 p-4 rounded-xl border border-red-100">
+                                    <h4 class="font-semibold text-red-800 text-sm mb-1">Kekurangan</h4>
+                                    <ul class="text-xs text-gray-600 space-y-1 list-disc pl-4">
+                                        <li>Alokasi waktu pembuatan dan presentasi poster Canva dalam 1x pertemuan (2 JP) berisiko tidak tuntas sehingga berpotensi menjadi PR.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8 md:p-10 bg-slate-800 text-white relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-secondary/20 rounded-full blur-2xl -mr-10 -mt-10"></div>
+                        <h3 class="font-display font-bold text-xl mb-4 text-white relative z-10">Analisis Kajian Teori</h3>
+                        <div class="space-y-4 relative z-10">
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Modul ini mengadopsi <strong>Project-Based Learning (PjBL)</strong> secara hibrida. Berdasarkan teori <em>Experiential Learning (Kolb)</em>, siswa tidak hanya mengamati teori hoaks, tetapi langsung merefleksikan dan melakukan aksi konkret (merancang poster edukasi).
+                            </p>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Pemilihan penilaian sumatif berupa desain poster digital di Canva selaras dengan kerangka kecakapan abad 21 (4C), khususnya pada aspek <em>Creativity</em> dan <em>Critical Thinking</em> dalam menyusun pesan penangkal hoaks.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ARTEFAK 2: MEDIA AJAR -->
+            <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden fade-in-up delay-100">
+                <div class="p-8 md:p-10 border-b border-gray-50 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
+                    <div class="flex items-center gap-5">
+                        <div class="w-16 h-16 bg-amber-50 text-amber-500 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">
+                            <i class="fas fa-photo-video"></i>
+                        </div>
+                        <div>
+                            <h2 class="font-display text-2xl font-bold text-dark">Media Ajar (Salindia)</h2>
+                            <p class="text-gray-500">Presentasi Visual Identifikasi & Cek Fakta</p>
+                        </div>
+                    </div>
+                    <button onclick="window.open('assets/siklus2/media_ajar.pdf', '_blank')" class="bg-white border-2 border-gray-200 text-gray-700 hover:border-amber-500 hover:text-amber-600 px-6 py-2.5 rounded-full font-medium transition flex items-center whitespace-nowrap">
+                        <i class="far fa-file-pdf text-red-500 mr-2"></i> Lihat Dokumen
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+                    <div class="p-8 md:p-10 bg-white order-2 md:order-1">
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="font-bold text-dark flex items-center mb-2"><i class="fas fa-bullseye text-amber-500 mr-2"></i> Konteks & Tujuan</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">
+                                    Media presentasi ini (13 slide) digunakan untuk memberikan stimulasi visual kepada siswa. Menampilkan antarmuka <em>screenshot</em> grup obrolan (pesan berantai), ciri-ciri hoaks, hingga pengenalan platform cek fakta agar siswa memahami materi secara kontekstual.
+                                </p>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="bg-emerald-50/50 p-4 rounded-xl border border-emerald-100">
+                                    <h4 class="font-semibold text-emerald-800 text-sm mb-1">Kelebihan</h4>
+                                    <ul class="text-xs text-gray-600 space-y-1 list-disc pl-4">
+                                        <li>Penggunaan aset visual peringatan (warna merah) menarik perhatian.</li>
+                                        <li>Contoh kasus hoaks sangat konkret dan <em>up-to-date</em>.</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-red-50/50 p-4 rounded-xl border border-red-100">
+                                    <h4 class="font-semibold text-red-800 text-sm mb-1">Kekurangan</h4>
+                                    <ul class="text-xs text-gray-600 space-y-1 list-disc pl-4">
+                                        <li>Kurangnya deskripsi alternatif (teks panjang) jika media ini diberikan sebagai bahan bacaan mandiri di rumah tanpa penjelasan guru.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="p-8 md:p-10 bg-amber-50 border-b md:border-b-0 md:border-l border-amber-100 order-1 md:order-2 relative overflow-hidden">
+                        <div class="absolute bottom-0 left-0 w-full h-1 bg-amber-200"></div>
+                        <h3 class="font-display font-bold text-xl mb-4 text-amber-900">Analisis Kajian Teori</h3>
+                        <div class="space-y-4">
+                            <p class="text-amber-800/80 text-sm leading-relaxed">
+                                Penyusunan media visual ini didasarkan pada <strong>Teori Kognitif Pembelajaran Multimedia (Richard Mayer)</strong>, khususnya <em>Signaling Principle</em> (Prinsip Sinyal).
+                            </p>
+                            <p class="text-amber-800/80 text-sm leading-relaxed">
+                                Elemen penting seperti "Ciri-ciri Hoaks" dan "Langkah Cek Fakta" disorot menggunakan ikon tebal dan tata letak terstruktur. Ini membantu mengarahkan atensi siswa pada materi esensial tanpa membebani memori kerja kognitif mereka.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ARTEFAK 3: LKPD -->
+            <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden fade-in-up delay-200">
+                <div class="p-8 md:p-10 border-b border-gray-50 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
+                    <div class="flex items-center gap-5">
+                        <div class="w-16 h-16 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <div>
+                            <h2 class="font-display text-2xl font-bold text-dark">LKPD & Hasil Siswa</h2>
+                            <p class="text-gray-500">Studi Kasus Budi & Proyek Desain Edukasi</p>
+                        </div>
+                    </div>
+                    <button onclick="window.open('assets/siklus2/lkpd_fix.pdf', '_blank')" class="bg-white border-2 border-gray-200 text-gray-700 hover:border-emerald-500 hover:text-emerald-600 px-6 py-2.5 rounded-full font-medium transition flex items-center whitespace-nowrap">
+                        <i class="far fa-file-pdf text-red-500 mr-2"></i> Lihat Dokumen
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+                    <div class="p-8 md:p-10 bg-white">
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="font-bold text-dark flex items-center mb-2"><i class="fas fa-bullseye text-emerald-500 mr-2"></i> Konteks & Tujuan</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">
+                                    LKPD terbagi menjadi dua kegiatan: Analisis Kasus (Budi dan hoaks banjir bandang) serta pengumpulan Proyek Pembuatan Poster. Dilengkapi dengan fitur pemindai QR Code untuk mengunggah tugas kelompok secara *paperless*.
+                                </p>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="bg-emerald-50/50 p-4 rounded-xl border border-emerald-100">
+                                    <h4 class="font-semibold text-emerald-800 text-sm mb-1">Kelebihan</h4>
+                                    <ul class="text-xs text-gray-600 space-y-1 list-disc pl-4">
+                                        <li>Integrasi pengumpulan digital melalui Google Form & QR Code.</li>
+                                        <li>Soal analisis kasus menggugah penalaran sebab-akibat.</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-red-50/50 p-4 rounded-xl border border-red-100">
+                                    <h4 class="font-semibold text-red-800 text-sm mb-1">Kekurangan</h4>
+                                    <ul class="text-xs text-gray-600 space-y-1 list-disc pl-4">
+                                        <li>Sangat bergantung pada fasilitas *smartphone* siswa; dapat menjadi kendala jika kebijakan sekolah melarang membawa HP.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="p-8 md:p-10 bg-slate-50 border-t md:border-t-0 md:border-l border-gray-100">
+                        <h3 class="font-display font-bold text-xl mb-4 text-dark">Analisis Kajian Teori</h3>
+                        <div class="space-y-4">
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Aktivitas dalam LKPD ini dapat ditinjau melalui lensa <strong>Teori Konektivisme (George Siemens)</strong>. Konektivisme menyatakan bahwa pengetahuan didistribusikan melintasi jaringan dan pembelajaran terdiri dari kemampuan untuk membangun & melintasi jaringan tersebut.
+                            </p>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Saat siswa diminta menyebutkan "sumber resmi" (seperti BMKG atau portal anti-hoaks), mereka sedang dilatih untuk terhubung ke simpul informasi (*nodes*) yang valid di luar batas ruang kelas fisik mereka.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Bagian Dokumentasi Pelaksanaan -->
+    <section id="dokumentasi" class="py-16 bg-white border-t border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in-up">
+                <h2 class="font-display text-3xl font-bold text-dark mb-4">Dokumentasi Pelaksanaan</h2>
+                <div class="w-16 h-1 bg-secondary mx-auto rounded-full mb-4"></div>
+            </div>
+
+            <!-- Grid Galeri Foto (Murni Tanpa Teks) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Foto 1 -->
+                <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-sm border border-gray-200 fade-in-up hover:shadow-xl transition-all duration-300 group">
+                    <div class="overflow-hidden h-64 relative">
+                        <img src="assets/siklus2/images/images1.jpg" alt="Dokumentasi Pelaksanaan 1" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                        <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                </div>
+
+                <!-- Foto 2 -->
+                <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-sm border border-gray-200 fade-in-up delay-100 hover:shadow-xl transition-all duration-300 group">
+                    <div class="overflow-hidden h-64 relative">
+                        <img src="assets/siklus2/images/images2.jpg" alt="Dokumentasi Pelaksanaan 2" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                        <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                </div>
+
+                <!-- Foto 3 -->
+                <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-sm border border-gray-200 fade-in-up delay-200 hover:shadow-xl transition-all duration-300 group">
+                    <div class="overflow-hidden h-64 relative">
+                        <img src="assets/siklus2/images/images4.jpeg" alt="Dokumentasi Pelaksanaan 3" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                        <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white pt-12 pb-8 border-t border-gray-100 text-center">
+        <div class="max-w-6xl mx-auto px-4">
+            <h3 class="font-display font-bold text-xl text-dark mb-4">
+                Zain<span class="text-primary">udin.</span>
+            </h3>
+            <p class="text-gray-500 text-sm">
+                &copy; <span id="year"></span> Portofolio Zainudin. E-Portfolio PPG Prajabatan.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Memanggil Script Utama -->
+    <script src="main.js"></script>
+    <script>
+        // Memastikan update tahun jika main.js lambat dimuat
+        if(document.getElementById('year')) {
+            document.getElementById('year').textContent = new Date().getFullYear();
+        }
+    </script>
+</body>
+</html>

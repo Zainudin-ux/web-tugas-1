@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siklus 1 - Portofolio | Zainudin</title>
+    
+    <!-- Tailwind CSS untuk Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome untuk Ikon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#4F46E5', // Indigo 600
+                        secondary: '#06B6D4', // Cyan 500
+                        dark: '#0F172A', // Slate 900
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Memanggil file CSS eksternal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans text-gray-700 bg-gray-50 antialiased selection:bg-primary selection:text-white">
+
+    <!-- Navigasi Khusus Halaman Artefak -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="font-display font-bold text-2xl text-dark tracking-tight">
+                        Zain | <span class="text-primary">E - Portofolio</span>
+                    </a>
+                </div>
+                <!-- Menu Desktop -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-600 hover:text-primary transition font-medium">Beranda</a>
+                    <a href="siklus1.html" class="text-primary font-bold border-b-2 border-primary transition pb-1">Siklus 1</a>
+                    <a href="siklus2.html" class="text-gray-600 hover:text-primary transition font-medium">Siklus 2</a>
+                    <a href="siklus3.html" class="text-gray-600 hover:text-primary transition font-medium">Siklus 3</a>
+                </div>
+                <!-- Tombol Menu Mobile -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col">
+                <a href="index.html" class="block px-3 py-2 text-gray-600 font-medium hover:bg-indigo-50 hover:text-primary rounded-md">Beranda</a>
+                <a href="siklus1.html" class="block px-3 py-2 text-primary font-bold bg-indigo-50 rounded-md">Siklus 1</a>
+                <a href="siklus2.html" class="block px-3 py-2 text-gray-600 font-medium hover:bg-indigo-50 hover:text-primary rounded-md">Siklus 2</a>
+                <a href="siklus3.html" class="block px-3 py-2 text-gray-600 font-medium hover:bg-indigo-50 hover:text-primary rounded-md">Siklus 3</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Halaman / Mini Hero -->
+    <section class="pt-32 pb-16 bg-white border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 fade-in-up">
+                <div>
+                    <div class="inline-block px-4 py-1.5 bg-indigo-50 text-primary font-semibold rounded-full text-sm mb-4">
+                        <i class="fas fa-sync-alt mr-2"></i> PPL Terbimbing - Siklus 1
+                    </div>
+                    <h1 class="font-display text-3xl md:text-5xl font-bold text-dark mb-4">
+                        DSI: <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Etika Bermedia Sosial</span>
+                    </h1>
+                    <p class="text-gray-500 max-w-2xl text-lg">
+                        Analisis komprehensif terhadap artefak pembelajaran yang dirancang untuk membekali peserta didik dengan kecakapan literasi digital dan jejak digital yang beretika.
+                    </p>
+                </div>
+                <div class="flex-shrink-0">
+                    <a href="#artefak" class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white hover:bg-indigo-700 transition shadow-lg shadow-indigo-200">
+                        <i class="fas fa-arrow-down"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Artefak & Analisis -->
+    <section id="artefak" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+
+            <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden fade-in-up">
+                <div class="p-8 md:p-10 border-b border-gray-50 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
+                    <div class="flex items-center gap-5">
+                        <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <div>
+                            <h2 class="font-display text-2xl font-bold text-dark">Modul Ajar (RPP)</h2>
+                            <p class="text-gray-500">Rencana Pelaksanaan Pembelajaran Kurikulum Merdeka Fase D</p>
+                        </div>
+                    </div>
+                    <button onclick="window.open('assets/siklus1/media_ajar_fix.pdf', '_blank')" class="bg-white border-2 border-gray-200 text-gray-700 hover:border-primary hover:text-primary px-6 py-2.5 rounded-full font-medium transition flex items-center whitespace-nowrap">
+                        <i class="far fa-file-pdf text-red-500 mr-2"></i> Lihat Dokumen
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+                    <div class="p-8 md:p-10 bg-white">
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="font-bold text-dark flex items-center mb-2"><i class="fas fa-bullseye text-primary mr-2"></i> Konteks & Tujuan</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">
+                                    Modul ajar ini dirancang untuk jenjang Sekolah Menengah Pertama Kelas VII Fase D pada materi Dampak Sosial Informatika. Fokus utamanya adalah membimbing peserta didik agar mampu mengidentifikasi dampak positif dan negatif media sosial serta menerapkan etika digital secara bijak dalam kehidupan sehari-hari melalui implementasi model pembelajaran Problem-Based Learning.
+                                </p>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="bg-emerald-50/50 p-4 rounded-xl border border-emerald-100">
+                                    <h4 class="font-semibold text-emerald-800 text-sm mb-1">Kelebihan</h4>
+                                    <ul class="text-xs text-gray-600 space-y-1 list-disc pl-4">
+                                        <li>Sintaks pembelajaran Problem-Based Learning terstruktur secara runut dan jelas mulai dari tahap orientasi masalah hingga evaluasi.</li>
+                                        <li>Memiliki integrasi yang kuat dengan Profil Pelajar Pancasila, khususnya pada dimensi Bernalar Kritis dan Gotong Royong.</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-red-50/50 p-4 rounded-xl border border-red-100">
+                                    <h4 class="font-semibold text-red-800 text-sm mb-1">Kekurangan</h4>
+                                    <ul class="text-xs text-gray-600 space-y-1 list-disc pl-4">
+                                        <li>Alokasi waktu pengerjaan LKPD dan presentasi kelompok sangat ketat, sehingga berisiko melebihi batas durasi 2 JP yang telah ditentukan jika dinamika kelas terlalu tinggi.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8 md:p-10 bg-slate-800 text-white relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full blur-2xl -mr-10 -mt-10"></div>
+                        <h3 class="font-display font-bold text-xl mb-4 text-white relative z-10">Analisis Kajian Teori</h3>
+                        <div class="space-y-4 relative z-10">
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Modul ini disusun berdasarkan prinsip <strong>Teori Konstruktivisme Sosial Vygotsky</strong>, yang menekankan bahwa proses belajar terjadi paling efektif melalui interaksi sosial dan kolaborasi. Aktivitas kelompok diarahkan untuk membantu peserta didik memecahkan masalah nyata dalam Zona Perkembangan Proksimal mereka dengan bantuan teman sebaya.
+                            </p>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Rencana pelaksanaan ini juga mengintegrasikan kerangka <strong>TPACK (Technological Pedagogical Content Knowledge)</strong>, di mana penguasaan materi dampak teknologi diselaraskan dengan metode pedagogi aktif serta pemanfaatan perangkat digital untuk mendukung efisiensi proses belajar mengajar.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden fade-in-up delay-100">
+                <div class="p-8 md:p-10 border-b border-gray-50 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
+                    <div class="flex items-center gap-5">
+                        <div class="w-16 h-16 bg-amber-50 text-amber-500 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <div>
+                            <h2 class="font-display text-2xl font-bold text-dark">Media Ajar</h2>
+                            <p class="text-gray-500">Salindia Presentasi Interaktif Dampak Media Sosial</p>
+                        </div>
+                    </div>
+                    <button onclick="window.open('assets/siklus1/media_ajar.pdf', '_blank')" class="bg-white border-2 border-gray-200 text-gray-700 hover:border-amber-500 hover:text-amber-600 px-6 py-2.5 rounded-full font-medium transition flex items-center whitespace-nowrap">
+                        <i class="far fa-file-pdf text-red-500 mr-2"></i> Lihat Dokumen
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+                    <div class="p-8 md:p-10 bg-white order-2 md:order-1">
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="font-bold text-dark flex items-center mb-2"><i class="fas fa-bullseye text-amber-500 mr-2"></i> Konteks & Tujuan</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">
+                                    Media pembelajaran ini berbentuk salindia interaktif yang memuat klasifikasi jenis platform digital serta pembagian informasi bersifat publik dan privat. Media ini bertujuan untuk menarik perhatian awal peserta didik melalui elemen visual kontekstual sekaligus menjadi jangkar pemahaman sebelum melakukan investigasi kelompok.
+                                </p>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="bg-emerald-50/50 p-4 rounded-xl border border-emerald-100">
+                                    <h4 class="font-semibold text-emerald-800 text-sm mb-1">Kelebihan</h4>
+                                    <ul class="text-xs text-gray-600 space-y-1 list-disc pl-4">
+                                        <li>Gaya visual modern dan relevan dengan karakteristik peserta didik generasi digital, ditunjang penggunaan ikon aplikasi yang sangat akrab di kehidupan sehari-hari mereka.</li>
+                                        <li>Penyajian materi terstruktur secara kontras untuk mempermudah penalaran logika dasar terkait batasan keamanan privasi internet.</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-red-50/50 p-4 rounded-xl border border-red-100">
+                                    <h4 class="font-semibold text-red-800 text-sm mb-1">Kekurangan</h4>
+                                    <ul class="text-xs text-gray-600 space-y-1 list-disc pl-4">
+                                        <li>Beberapa bagian slide materi dampak negatif memiliki kepadatan teks yang cukup tinggi, sehingga membutuhkan penjelasan lisan yang kuat agar peserta didik tidak mengalami kebosanan visual.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="p-8 md:p-10 bg-amber-50 border-b md:border-b-0 md:border-l border-amber-100 order-1 md:order-2 relative overflow-hidden">
+                        <div class="absolute bottom-0 left-0 w-full h-1 bg-amber-200"></div>
+                        <h3 class="font-display font-bold text-xl mb-4 text-amber-900">Analisis Kajian Teori</h3>
+                        <div class="space-y-4">
+                            <p class="text-amber-800/80 text-sm leading-relaxed">
+                                Pengembangan media ajar ini mengacu pada <strong>Cognitive Theory of Multimedia Learning</strong> oleh Richard E. Mayer. Penerapan prinsip penandaan atau <em>Signaling Principle</em> diimplementasikan lewat pembagian kode warna dan tata letak yang kontras guna membantu otak menyortir informasi krusial tanpa memicu beban kognitif berlebih.
+                            </p>
+                            <p class="text-amber-800/80 text-sm leading-relaxed">
+                                Pengaitan objek visual populer seperti logo TikTok dan WhatsApp berfungsi sebagai jembatan asimilasi kognitif sesuai konsep <strong>Pembelajaran Bermakna Ausubel</strong>, yang mengaitkan pengetahuan baru dengan struktur pengetahuan atau pengalaman konkret yang telah dimiliki peserta didik sebelumnya.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden fade-in-up delay-200">
+                <div class="p-8 md:p-10 border-b border-gray-50 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
+                    <div class="flex items-center gap-5">
+                        <div class="w-16 h-16 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">
+                            <i class="fas fa-file-signature"></i>
+                        </div>
+                        <div>
+                            <h2 class="font-display text-2xl font-bold text-dark">LKPD & Hasil Siswa</h2>
+                            <p class="text-gray-500">Lembar Kerja Peserta Didik Berbasis Kasus Kontekstual</p>
+                        </div>
+                    </div>
+                    <button onclick="window.open('assets/siklus1/lkpd_fix.pdf', '_blank')" class="bg-white border-2 border-gray-200 text-gray-700 hover:border-emerald-500 hover:text-emerald-600 px-6 py-2.5 rounded-full font-medium transition flex items-center whitespace-nowrap">
+                        <i class="far fa-file-pdf text-red-500 mr-2"></i> Lihat Dokumen
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+                    <div class="p-8 md:p-10 bg-white">
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="font-bold text-dark flex items-center mb-2"><i class="fas fa-bullseye text-emerald-500 mr-2"></i> Konteks & Tujuan</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">
+                                    Lembar Kerja Peserta Didik ini dikembangkan dengan memuat tiga jenjang aktivitas berkelompok, yaitu mencocokkan logo platform, mengklasifikasikan skenario dampak, serta melakukan analisis mendalam terhadap studi kasus penyimpangan etika grup komunikasi digital dan kecanduan internet.
+                                </p>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="bg-emerald-50/50 p-4 rounded-xl border border-emerald-100">
+                                    <h4 class="font-semibold text-emerald-800 text-sm mb-1">Kelebihan</h4>
+                                    <ul class="text-xs text-gray-600 space-y-1 list-disc pl-4">
+                                        <li>Alur desain tugas dirancang berjenjang dari tingkat kesulitan rendah hingga soal berbasis kemampuan berpikir tingkat tinggi (HOTS).</li>
+                                        <li>Narasi studi kasus diangkat dari problematika riil dan dekat dengan keseharian remaja, sehingga memicu empati dan proses berpikir kritis siswa secara alami.</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-red-50/50 p-4 rounded-xl border border-red-100">
+                                    <h4 class="font-semibold text-red-800 text-sm mb-1">Kekurangan</h4>
+                                    <ul class="text-xs text-gray-600 space-y-1 list-disc pl-4">
+                                        <li>Ruang lingkup pertanyaan uraian analisis pada aktivitas akhir masih terlalu luas tanpa adanya arahan kalimat pemantik awal, yang berpotensi menyulitkan kelompok berkemampuan belajar lambat.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="p-8 md:p-10 bg-slate-50 border-t md:border-t-0 md:border-l border-gray-100">
+                        <h3 class="font-display font-bold text-xl mb-4 text-dark">Analisis Kajian Teori</h3>
+                        <div class="space-y-4">
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Lembar kerja ini merupakan perwujudan esensial dari implementasi sintaks Problem-Based Learning pada fase membimbing penyelidikan mandiri dan kelompok. Desain tugas yang bertahap dari aktivitas identifikasi awal menuju analisis narasi kasus menerapkan teori <strong>Scaffolding dari Jerome Bruner</strong>.
+                            </p>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Berdasarkan evaluasi kelemahan yang ditemukan, langkah reflektif untuk perbaikan ke depan perlu mengadopsi strategi pembelajaran berdiferensiasi. Pada siklus berikutnya, instrumen lembar kerja esai perlu dilengkapi dengan panduan atau kalimat penuntun bergradasi sebagai bentuk adaptasi proses belajar demi memayungi keberagaman tingkat pemahaman di dalam kelas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Bagian Dokumentasi Pelaksanaan -->
+    <section id="dokumentasi" class="py-16 bg-white border-t border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in-up">
+                <h2 class="font-display text-3xl font-bold text-dark mb-4">Dokumentasi Pelaksanaan</h2>
+                <div class="w-16 h-1 bg-primary mx-auto rounded-full mb-4"></div>
+                <p class="text-gray-500 max-w-2xl mx-auto text-sm">
+                    Galeri kegiatan belajar mengajar pada Siklus 1. Menampilkan proses kolaborasi, penggunaan media digital, dan interaksi peserta didik di dalam kelas.
+                </p>
+            </div>
+
+            <!-- Grid Galeri Foto -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Foto 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 fade-in-up hover:shadow-xl transition-all duration-300 group">
+                    <div class="overflow-hidden h-64 relative">
+                        <img src="assets/siklus1/images/images1.jpg" alt="Dokumentasi Pelaksanaan 1" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                        <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                </div>
+
+                <!-- Foto 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 fade-in-up delay-100 hover:shadow-xl transition-all duration-300 group">
+                    <div class="overflow-hidden h-64 relative">
+                        <img src="assets/siklus1/images/images2.jpg" alt="Dokumentasi Pelaksanaan 2" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                        <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                </div>
+
+                <!-- Foto 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 fade-in-up delay-200 hover:shadow-xl transition-all duration-300 group">
+                    <div class="overflow-hidden h-64 relative">
+                        <img src="assets/siklus1/images/images3.jpg" alt="Dokumentasi Pelaksanaan 3" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                        <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white pt-12 pb-8 border-t border-gray-100 text-center">
+        <div class="max-w-6xl mx-auto px-4">
+            <h3 class="font-display font-bold text-xl text-dark mb-4">
+                Zain<span class="text-primary">udin.</span>
+            </h3>
+            <p class="text-gray-500 text-sm">
+                &copy; <span id="year"></span> Portofolio Zainudin. E-Portfolio PPG Prajabatan.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Memanggil Script Utama -->
+    <script src="main.js"></script>
+    <script>
+        // Memastikan update tahun jika main.js lambat dimuat
+        if(document.getElementById('year')) {
+            document.getElementById('year').textContent = new Date().getFullYear();
+        }
+    </script>
+</body>
+</html>
